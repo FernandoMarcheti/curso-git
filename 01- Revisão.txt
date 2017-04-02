@@ -1,0 +1,47 @@
+Criação de chave de segurança: 
+ssh-keygen -t rsa -C "seu_email@provedor.com"
+
+em Documents and Settings será gerado um arquivo "id_rsa.pub"	
+
+no github Siga "Settings", "SSH and GPG keys" e "New SSH key".
+Insira na caixa de texto o conteúdo do seu arquivo id_rsa.pub.
+
+
+git tag
+git blame
+git commit -am 'Mensagem de commit'
+git whatchanged (é um git log que mostra também quais arquivos foram alterados)
+git whatchanged -p (mostra também o que foi alterado)
+git branch -t design origin/design (cria a branch design igual a branch design do repositório) 
+git checkout -t origin/design (uma nova branch local chamada design é criada, muda-se para essa branch, copiamos todo o conteúdo da branch remota design do repositório referente ao origin e trackeamos as duas branches)
+git push origin :design (deletar branch remota)
+git fetch origin (verificar todas as atualizações que foram realizadas no repositório referente ao origin)
+
+boas práticas:
+	criar uma branch única para trabalhar;
+	voltar para a branch que irá ao repositório
+	fazer o pull
+	se não tiver alterações no repositório...
+	git merge nomeDaBranchUnica
+	git push
+	* se no git pull tiver alterações...
+	git rebase branchDoRepositorio branchUnica, trata o conflito, adiciona a alteração e git rebase --continue...
+	volta para branchDoRepositorio git merge e git push
+
+O continue deve ser utilizado após a resolução manual dos conflitos, enquanto que o skip faz com que suas alterações sejam descartadas e o abort volta atrás em todo o processo de rebase.
+
+
+verificar 
+	- como criar tag
+	- nas boas práticas, se eu fizer merge da dev pra master sem fazer o pull antes, o que acontece?
+	- como reverter um merge entre duas branches?
+
+Fork
+git remote add original [caminho_do_repositorio_remoto]
+git fetch [repositorio] - faz o download
+git merge original/master
+
+
+	
+
+	
