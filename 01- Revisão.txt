@@ -6,7 +6,7 @@ em Documents and Settings será gerado um arquivo "id_rsa.pub"
 no github Siga "Settings", "SSH and GPG keys" e "New SSH key".
 Insira na caixa de texto o conteúdo do seu arquivo id_rsa.pub.
 
-
+asfasfasdf
 git tag
 git blame
 git commit -am 'Mensagem de commit'
